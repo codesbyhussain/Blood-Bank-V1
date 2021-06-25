@@ -27,7 +27,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 SECRET_KEY = '$#6&687_5s46(i)0$_4f*&p=b$ggrc_pv^%iarqhbd(!u9*%2('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['https://blood-bankv1.herokuapp.com/']
 
 
@@ -125,13 +125,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
+STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
-    'Z:/Django Apps/Albert code/Blood-Donation-System/Blood_Donation_system/venv/static',
-    'static',
-    'Z:/Django Apps/Albert code/Blood-Donation-System/venv/static',
-]
+)
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder"
