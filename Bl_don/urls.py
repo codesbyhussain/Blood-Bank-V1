@@ -24,3 +24,7 @@ urlpatterns = [
     path('', include('polls_app.urls'))
 
 ]
+from django.contrib import admin
+
+admin.autodiscover()
+admin.site.enable_nav_sidebar = False
