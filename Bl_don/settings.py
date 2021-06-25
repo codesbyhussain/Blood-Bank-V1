@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import django_heroku
 from pathlib import Path
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,9 +27,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 SECRET_KEY = '$#6&687_5s46(i)0$_4f*&p=b$ggrc_pv^%iarqhbd(!u9*%2('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+DEBUG = False
+ALLOWED_HOSTS = ['https://blood-bankv1.herokuapp.com/']
 
 
 # Application definition
@@ -49,6 +48,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -142,7 +142,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 #Email settings
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'avenger.hussain14@gmail.com'
-EMAIL_HOST_PASSWORD = 'ayymaignobpqkjmi'
+EMAIL_HOST_USER = 'covidsupplier2020@gmail.com'
+EMAIL_HOST_PASSWORD = 'vtvkrnrnbqybwwea'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
