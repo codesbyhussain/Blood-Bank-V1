@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-import django_heroku
+#import django_heroku
 from pathlib import Path
 import os
 
@@ -29,7 +29,7 @@ SECRET_KEY = '$#6&687_5s46(i)0$_4f*&p=b$ggrc_pv^%iarqhbd(!u9*%2('
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['https://blood-bankv1.herokuapp.com/']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', 'https://blood-bankv1.herokuapp.com/']
 
 
 # Application definition
@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'Bl_don.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
+        'NAME': 'db.sqlite3',
     }
 }
     
@@ -149,4 +149,4 @@ EMAIL_USE_TLS = True
 
 
 # Activate Django-Heroku.
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
