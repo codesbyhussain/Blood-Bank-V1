@@ -32,20 +32,6 @@ Alternatively, you can register a new user to test the donor functionality.
 
 ---
 
-## How to Run
-
-### Using Docker
-
-1. Build the Docker image:
-   ```bash
-   docker build -t blood-donation-app .
-    ```
-
-
-Sure! Here's the content in Markdown format:
-
-markdown
-Copy code
 # Django Blood Donation Management System
 
 ## Overview
@@ -85,8 +71,9 @@ Alternatively, you can register a new user to test the donor functionality.
 ### Using Docker
 
 1. Build the Docker image:
-   ```bash
-   docker build -t blood-donation-app .
+```bash
+docker build -t blood-donation-app .
+```
 2. Run the Docker container:
 
 ```bash
